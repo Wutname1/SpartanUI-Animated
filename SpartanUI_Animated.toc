@@ -1,0 +1,12 @@
+## Interface: 40400, 110002
+## Title: SpartanUI: |CFF0070DDAnimated Texture|r
+## Version: 2.0.0
+## Author: Haghala - EU-Shadowsong
+## Notes: Animates the Statusbar textures in Spartan UI
+## Dependencies: SpartanUI
+
+lib\LibStub\LibStub.lua
+lib\LibSmoothStatusBar-1.0\LibSmoothStatusBar-1.0.lua
+lang\enUS.lua
+
+SpartanUI_Animated.lua
