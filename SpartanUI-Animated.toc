@@ -1,10 +1,10 @@
 ## Interface: 40400, 110002
-## Title: SpartanUI: |CFF0070DDAnimated Texture|r
+## Title: Spartan|cffe21f1fUI|r: |CFF0070DDAnimated Texture|r
 ## Version: 2.0.0
 ## Author: wutname1, Haghala - EU-Shadowsong
 ## Notes: Animates the Statusbar textures in Spartan UI
 ## Dependencies: SpartanUI
-## IconTexture: Interface/Addons/SpartanUI/images/Spartan-Helm
+## IconTexture: Interface/Addons/SpartanUI-Animated/Spartan-Helm
 ## X-Curse-Project-ID: 55589
 ## X-Wago-ID:
 ## X-Github: https://github.com/Wutname1/SpartanUI-Animated

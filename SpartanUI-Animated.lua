@@ -1,5 +1,5 @@
 local SUI = LibStub('AceAddon-3.0'):GetAddon('SpartanUI') ---@type SUI
-local L = LibStub('AceLocale-3.0'):GetLocale('SpartanUI_Animated', true)
+local L = LibStub('AceLocale-3.0'):GetLocale('SpartanUI-Animated', true)
 local Smooth = LibStub('LibSmoothStatusBar-1.0')
 ---@class SUI.Module.Animation : SUI.Module
 local addon = SUI:NewModule('AnimatedBars')
@@ -18,26 +18,26 @@ local s_table_party_target = {}
 local DBDefaults = {
 	enable = true,
 	animationIntervalStop = 0.09,
-	health = 'interface\\addons\\SpartanUI_Animated\\Animations\\Health\\HealthBar',
-	mana = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	cast = 'interface\\addons\\SpartanUI_Animated\\Animations\\Cast\\CastBar',
-	focus = 'interface\\addons\\SpartanUI_Animated\\Animations\\Energy\\EnergyBar',
-	runicpower = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	energy = 'interface\\addons\\SpartanUI_Animated\\Animations\\Energy\\EnergyBar',
-	rage = 'interface\\addons\\SpartanUI_Animated\\Animations\\Rage\\RageBar',
-	malestorm = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	insanity = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	astralpower = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	fury = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar',
-	pain = 'interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar'
+	health = 'interface\\addons\\SpartanUI-Animated\\Animations\\Health\\HealthBar',
+	mana = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	cast = 'interface\\addons\\SpartanUI-Animated\\Animations\\Cast\\CastBar',
+	focus = 'interface\\addons\\SpartanUI-Animated\\Animations\\Energy\\EnergyBar',
+	runicpower = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	energy = 'interface\\addons\\SpartanUI-Animated\\Animations\\Energy\\EnergyBar',
+	rage = 'interface\\addons\\SpartanUI-Animated\\Animations\\Rage\\RageBar',
+	malestorm = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	insanity = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	astralpower = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	fury = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar',
+	pain = 'interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar'
 }
 local textures = {
-	['interface\\addons\\SpartanUI_Animated\\Animations\\Health\\HealthBar'] = HEALTH,
-	['interface\\addons\\SpartanUI_Animated\\Animations\\Cast\\CastBar'] = L['Bar/Casting'],
-	['interface\\addons\\SpartanUI_Animated\\Animations\\Mana\\Manabar'] = MANA,
-	['interface\\addons\\SpartanUI_Animated\\Animations\\Rage\\RageBar'] = RAGE,
-	['interface\\addons\\SpartanUI_Animated\\Animations\\Energy\\EnergyBar'] = ENERGY,
-	['interface\\addons\\SpartanUI_Animated\\Animations\\DeusEx\\DeusEx'] = L['Bar/DeusEx']
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Health\\HealthBar'] = HEALTH,
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Cast\\CastBar'] = L['Bar/Casting'],
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar'] = MANA,
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Rage\\RageBar'] = RAGE,
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Energy\\EnergyBar'] = ENERGY,
+	['interface\\addons\\SpartanUI-Animated\\Animations\\DeusEx\\DeusEx'] = L['Bar/DeusEx']
 }
 
 function addon:ResetSettings()

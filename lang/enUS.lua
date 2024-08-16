@@ -1,4 +1,4 @@
-local L = LibStub('AceLocale-3.0'):NewLocale('SpartanUI_Animated', 'enUS', true, true)
+local L = LibStub('AceLocale-3.0'):NewLocale('SpartanUI-Animated', 'enUS', true, true)
 L['Animation/Enabled'] = 'Enable Texture Animation'
 L['Animation/ReloadRequired'] = 'ReloadUI Required'
 L['Animation'] = 'Bar Animation'
