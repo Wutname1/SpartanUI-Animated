@@ -13,4 +13,4 @@ lib\LibStub\LibStub.lua
 lib\LibSmoothStatusBar-1.0\LibSmoothStatusBar-1.0.lua
 lang\enUS.lua
 
-SpartanUI_Animated.lua
+SpartanUI-Animated.lua
