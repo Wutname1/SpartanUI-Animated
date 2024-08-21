@@ -6,7 +6,7 @@ Have your Health and Mana bar become more alive with moving textures!
 
 - The textures can be changed in `/sui` under `Modules > Bar Animation`.
 
-Requires [SpartanUI](http://www.curse.com/addons/wow/spartan-ui)
+Requires [SpartanUI](https://www.curseforge.com/wow/addons/spartan-ui)
 
 ![animated](https://github.com/user-attachments/assets/daf9c30b-af1a-4f94-b885-fb4ccd363dba)
 
