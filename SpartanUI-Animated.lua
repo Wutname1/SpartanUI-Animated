@@ -444,19 +444,3 @@ function addon:NewUpdater()
 		end
 	end
 end
-
-function SUIA_Refresh()
-	addon:Refresh()
-end
-
-function SUIA_Add(UnitID, frame)
-	if not (UnitID) or not (frame) then
-		print('missing UnitID or frame')
-		return
-	end
-	if (frame.Castbar) then
-		s_table[UnitID] = frame
-	elseif (frame.Health) then
-		s_table_party_target[UnitID] = frame
-	end
-end
