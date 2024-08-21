@@ -33,11 +33,11 @@ local DBDefaults = {
 }
 local textures = {
 	['interface\\addons\\SpartanUI-Animated\\Animations\\Health\\HealthBar'] = HEALTH,
-	['interface\\addons\\SpartanUI-Animated\\Animations\\Cast\\CastBar'] = L['Bar/Casting'],
+	['interface\\addons\\SpartanUI-Animated\\Animations\\Cast\\CastBar'] = L['Castbar'],
 	['interface\\addons\\SpartanUI-Animated\\Animations\\Mana\\Manabar'] = MANA,
 	['interface\\addons\\SpartanUI-Animated\\Animations\\Rage\\RageBar'] = RAGE,
 	['interface\\addons\\SpartanUI-Animated\\Animations\\Energy\\EnergyBar'] = ENERGY,
-	['interface\\addons\\SpartanUI-Animated\\Animations\\DeusEx\\DeusEx'] = L['Bar/DeusEx']
+	['interface\\addons\\SpartanUI-Animated\\Animations\\DeusEx\\DeusEx'] = L['DeusEx']
 }
 
 function addon:ResetSettings()
@@ -52,7 +52,7 @@ function addon:OnInitialize()
 end
 
 function addon:OnEnable()
-	local f = CreateFrame('Frame', 'Animation', WorldFrame)
+	local f = CreateFrame('Frame', 'Bar Animation', WorldFrame)
 	f:SetFrameStrata('BACKGROUND')
 	f:RegisterEvent('PLAYER_ENTERING_WORLD')
 	f:RegisterEvent('GROUP_ROSTER_UPDATE')
@@ -94,7 +94,7 @@ function addon:Options()
 		order = 990,
 		args = {
 			enable = {
-				name = L['Animation/Enabled'],
+				name = L['Enable Texture Animation'],
 				type = 'toggle',
 				order = 1,
 				width = 'full',
@@ -105,9 +105,9 @@ function addon:Options()
 					addon.DB.enable = val
 				end
 			},
-			enableinfo = {name = L['Animation/ReloadRequired'], type = 'description', order = 2},
+			enableinfo = {name = L['ReloadUI Required'], type = 'description', order = 2},
 			health = {
-				name = L['BarTexture/Health'],
+				name = L['Healthbar Texture'],
 				type = 'select',
 				order = 5,
 				style = 'dropdown',
@@ -121,7 +121,7 @@ function addon:Options()
 				end
 			},
 			cast = {
-				name = L['BarTexture/Casting'],
+				name = L['Casting'],
 				type = 'select',
 				order = 6,
 				style = 'dropdown',
@@ -135,7 +135,7 @@ function addon:Options()
 				end
 			},
 			mana = {
-				name = L['BarTexture/Mana'],
+				name = L['Mana'],
 				type = 'select',
 				order = 7,
 				style = 'dropdown',
@@ -149,7 +149,7 @@ function addon:Options()
 				end
 			},
 			rage = {
-				name = L['BarTexture/Rage'],
+				name = L['Rage'],
 				type = 'select',
 				order = 8,
 				style = 'dropdown',
@@ -163,7 +163,7 @@ function addon:Options()
 				end
 			},
 			energy = {
-				name = L['BarTexture/Energy'],
+				name = L['Energy'],
 				type = 'select',
 				order = 9,
 				style = 'dropdown',
@@ -177,7 +177,7 @@ function addon:Options()
 				end
 			},
 			focus = {
-				name = L['BarTexture/Focus'],
+				name = L['Focus'],
 				type = 'select',
 				order = 10,
 				style = 'dropdown',
@@ -191,7 +191,7 @@ function addon:Options()
 				end
 			},
 			runicpower = {
-				name = L['BarTexture/RunicPower'],
+				name = L['RunicPower'],
 				type = 'select',
 				order = 11,
 				style = 'dropdown',
@@ -206,7 +206,7 @@ function addon:Options()
 				end
 			},
 			astralpower = {
-				name = L['BarTexture/AstralPower'],
+				name = L['AstralPower'],
 				type = 'select',
 				order = 12,
 				style = 'dropdown',
@@ -220,7 +220,7 @@ function addon:Options()
 				end
 			},
 			malestorm = {
-				name = L['BarTexture/Maelstrom'],
+				name = L['Maelstrom'],
 				type = 'select',
 				order = 13,
 				style = 'dropdown',
@@ -234,7 +234,7 @@ function addon:Options()
 				end
 			},
 			insanity = {
-				name = L['BarTexture/Insanity'],
+				name = L['Insanity'],
 				type = 'select',
 				order = 14,
 				style = 'dropdown',
@@ -248,7 +248,7 @@ function addon:Options()
 				end
 			},
 			fury = {
-				name = L['BarTexture/Fury'],
+				name = L['Fury'],
 				type = 'select',
 				order = 15,
 				style = 'dropdown',
@@ -262,7 +262,7 @@ function addon:Options()
 				end
 			},
 			pain = {
-				name = L['BarTexture/Fury'],
+				name = L['Fury'],
 				type = 'select',
 				order = 15,
 				style = 'dropdown',
@@ -276,7 +276,7 @@ function addon:Options()
 				end
 			},
 			animationIntervalStop = {
-				name = L['BarTexture/Speed'],
+				name = L['Animation Speed'],
 				type = 'range',
 				order = 22,
 				width = 'double',
@@ -293,10 +293,14 @@ function addon:Options()
 				end
 			},
 			resetframes = {
-				name = L['Bars/ResetSettings'],
+				name = L['Reset to default'],
 				type = 'execute',
 				order = 23,
-				desc = L['Bars/resetallDesc'],
+				desc = L['Resets/Refresh Active UnitFrames'],
+				width = 'double',
+				disabled = function()
+					return not SUI.Options:hasChanges(addon.DB, DBDefaults)
+				end,
 				func = function()
 					addon:ResetSettings()
 				end
