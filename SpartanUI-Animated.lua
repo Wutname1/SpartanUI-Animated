@@ -7,7 +7,7 @@ addon.DisplayName = L['Animated Bars']
 addon.description = 'Animated Bars'
 
 local t_power = {}
-local lUnitExists = UnitExists
+local UnitExists = UnitExists
 local UnitPowerType = UnitPowerType
 local powerTable = {}
 for i = 0, 18 do
@@ -429,7 +429,7 @@ end
 
 function addon:NewUpdater()
 	for unit, frame in pairs(s_table) do
-		if lUnitExists(unit) and frame:IsVisible() then
+		if UnitExists(unit) and frame:IsVisible() then
 			local powerType = (UnitPowerType(unit) or 0)
 			AnimationUpdate(frame.Health, 14)
 			AnimationUpdate(frame.Power, powerType)
@@ -439,7 +439,7 @@ function addon:NewUpdater()
 		end
 	end
 	for unit, frame in pairs(s_table_party_target) do
-		if lUnitExists(unit) and frame:IsVisible() then
+		if UnitExists(unit) and frame:IsVisible() then
 			AnimationUpdate(frame.Health, 14)
 		end
 	end
