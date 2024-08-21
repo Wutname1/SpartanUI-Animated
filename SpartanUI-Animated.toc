@@ -9,8 +9,12 @@
 ## X-Wago-ID:
 ## X-Github: https://github.com/Wutname1/SpartanUI-Animated
 
+# General libraries
 lib\LibStub\LibStub.lua
 lib\LibSmoothStatusBar-1.0\LibSmoothStatusBar-1.0.lua
-lang\enUS.lua
 
+# Localization
+lang\localization.xml
+
+# Core
 SpartanUI-Animated.lua
