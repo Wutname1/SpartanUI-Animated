@@ -58,7 +58,9 @@ function addon:OnEnable()
 	f:RegisterEvent('GROUP_ROSTER_UPDATE')
 
 	if (addon.DB.enable) then
-		SUI_UF_player.Castbar:SetStatusBarColor(1, 1, 1, 1)
+		if SUI_UF_player then
+			SUI_UF_player.Castbar:SetStatusBarColor(1, 1, 1, 1)
+		end
 		f:SetScript(
 			'OnEvent',
 			function(this, event, ...)
