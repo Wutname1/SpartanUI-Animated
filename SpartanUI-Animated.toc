@@ -1,4 +1,4 @@
-## Interface: 11503, 40400, 110002
+## Interface: 11504, 40400, 110005
 ## Title: Spartan|cffe21f1fUI|r: |CFF0070DDAnimated Texture|r
 ## Version: 2.0.0
 ## Author: wutname1, Haghala - EU-Shadowsong
