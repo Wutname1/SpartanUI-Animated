@@ -22,7 +22,7 @@
 ]]
 
 -- Port of oUF Smooth Update by Xuerian
--- http://www.wowinterface.com/downloads/info11503-oUFSmoothUpdate.html
+-- http://www.wowinterface.com/downloads/info11505-oUFSmoothUpdate.html
 
 --[[
 Functions:
